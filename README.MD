@@ -26,4 +26,9 @@
   - Are we providing correct props to child
   - Are we using the correctly named + typed props in Child?
 
-
+### 2.3  Explicit component type annotations
+- Passing props to React have some issues
+- All React components can optionally provide these properties:
+    - propTypes, displayName, defaultProps, contextTypes
+    - TS doesn't know that we are making a react component. So it will think that Child will not have these properties
+- Make use of `React.FC<ChildProps>` to explicitly deine component with TS
