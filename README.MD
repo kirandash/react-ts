@@ -143,6 +143,12 @@
 ### 4.13. Applying Typings to Dispatch - src/state/action-creators/index.ts
 - add action type in dispatch method
 
+### 4.14. Setting Up Exports
+- combine reducers in reducers/index.ts file
+- create store - state/store.ts file
+    - wire up reducers and action
+- export store and action creators from state/index.ts file (only accessible file)
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
