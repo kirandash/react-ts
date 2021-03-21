@@ -149,6 +149,10 @@
     - wire up reducers and action
 - export store and action creators from state/index.ts file (only accessible file)
 
+### 4.15. Wiring Up to React
+- Use Provider to wrap App component and pass store - App.tsx
+- Add initialState to reducer
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
