@@ -119,6 +119,17 @@
 ### 4.6. Typing an Action
 - create Action Interface
 
+### 4.7. Separate Interfaces for Actions
+- mentioning payload type
+- so difffernt interfaces for different actions
+
+### 4.8. Applying Action Interfaces
+- | SearchRepositoriesAction
+  | SearchRepositoriesSuccessAction
+  | SearchRepositoriesErrorAction
+
+
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
