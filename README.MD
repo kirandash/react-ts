@@ -128,7 +128,7 @@
   | SearchRepositoriesSuccessAction
   | SearchRepositoriesErrorAction
 
-
+### 4.9. Adding an Action Type Enum
 
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
