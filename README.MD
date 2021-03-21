@@ -68,9 +68,12 @@
 - use VSCode tips suggestions to detect event type
 - Many other events viz: FocusEvent, PointerEvent
 
-### 3.4. TypeScript with Class Components - src/classes/UserSearch..tsx
+### 3.4. TypeScript with Class Components - src/classes/UserSearch.tsx
 - handle props
 - handle state
+
+### 3.5. Applying Types to Refs - src/refs/UserSearch.tsx
+- `const inputRef = useRef<HTMLInputElement | null>(null)` - null value just in case no ref is used in component
 
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
