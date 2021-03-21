@@ -175,6 +175,10 @@
 - reducers/index.ts
 - TS is aware of type of reducers but not in state
 
+### 4.22 Creating a Typed Selector
+- src/hooks/useTypedSelector.ts
+- useTypedSelector in src/components/RepositoriesList.tsx
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
