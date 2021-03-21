@@ -79,3 +79,6 @@
 ### 14.4 Capturing bundle errors - src/bundler/index.ts
 - add try catch block in index.ts
 - set code or error based on returned data in components/code-cell.tsx
+
+### 14.5 Printing Captured Erros - preview.tsx
+- pass error to Preview component from code-cell.tsx
