@@ -130,6 +130,11 @@
 
 ### 4.9. Adding an Action Type Enum
 
+### 4.10. A Better Way to Organize Code
+- state/actions/index.ts file - export action
+- state/action-types/index.ts file - export enum
+- Fix imports in reducer
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
