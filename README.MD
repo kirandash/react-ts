@@ -153,6 +153,9 @@
 - Use Provider to wrap App component and pass store - App.tsx
 - Add initialState to reducer
 
+### 4.17. Reminder on Event Types - src/components/RepositoriesList.tsx
+- `onSubmit = (event: React.FormEvent<HTMLFormElement>)`
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
