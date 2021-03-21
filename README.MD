@@ -112,6 +112,10 @@
 ### 4.3 Reducer Setup - src/state/reducers/repositoriesReducer.ts
 - create repositoriesReducer
 
+### 4.5. Annotating the Return Type
+- `reducer = (state: RepositoriesState, action: any): RepositoriesState`
+- so that returned data type is checked properly
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors

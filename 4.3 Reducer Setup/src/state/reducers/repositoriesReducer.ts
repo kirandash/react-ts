@@ -8,7 +8,8 @@ interface RepositoriesState {
 }
 
 // reducer
-const reducer = (state: RepositoriesState, action: any) => {
+// 4.5. Annotating the Return Type for reducer with RepositoriesState
+const reducer = (state: RepositoriesState, action: any): RepositoriesState => {
   switch (action.type) {
     case 'search_repositories':
       return { loading: true, error: null, data: [] };
