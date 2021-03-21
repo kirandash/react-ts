@@ -45,3 +45,10 @@
 - Ex: `useState([])` will set variable type as an array
 - To explicitly define: 
     `useState<string[]>([])`: array of strings
+
+### 2.7 Type unions in state
+- assigning multiple possible types for a data
+- user piece of state
+    - undefined (when component is first rendered and when the search did not find a user)
+    - {name: string, age: number}: when a user is found
+- Ex: `const [user, setUser] = useState<{ name: string, age: number } | undefined>()`
