@@ -26,13 +26,22 @@
   - Are we providing correct props to child
   - Are we using the correctly named + typed props in Child?
 
-### 2.3  Explicit component type annotations
+### 2.3 Explicit component type annotations
 - Passing props to React have some issues
 - All React components can optionally provide these properties:
     - propTypes, displayName, defaultProps, contextTypes
     - TS doesn't know that we are making a react component. So it will think that Child will not have these properties
 - Make use of `React.FC<ChildProps>` to explicitly deine component with TS
 
-### 2.4. Annotations with Children
-- `React.FC` allows us to use {children} props of react component
+### 2.4 Annotations with Children
+- `React.FC` allows us to use `children` props of react component
 - can not use with just basic ts
+
+### 2.5 State with TS
+
+### 2.6 Type Interface with State
+- TS auto defines the type for state variables based on initial state data
+- Ex: `useState('')` will set variable type as string
+- Ex: `useState([])` will set variable type as an array
+- To explicitly define: 
+    `useState<string[]>([])`: array of strings
