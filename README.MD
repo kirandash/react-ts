@@ -32,3 +32,7 @@
     - propTypes, displayName, defaultProps, contextTypes
     - TS doesn't know that we are making a react component. So it will think that Child will not have these properties
 - Make use of `React.FC<ChildProps>` to explicitly deine component with TS
+
+### 2.4. Annotations with Children
+- `React.FC` allows us to use {children} props of react component
+- can not use with just basic ts
