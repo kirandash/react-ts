@@ -137,6 +137,9 @@
 
 ### 4.11. Adding Action Creators
 
+### 4.12. Adding Request Logic
+- call API in action creator searchRepositories
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
