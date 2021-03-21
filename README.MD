@@ -52,3 +52,26 @@
     - undefined (when component is first rendered and when the search did not find a user)
     - {name: string, age: number}: when a user is found
 - Ex: `const [user, setUser] = useState<{ name: string, age: number } | undefined>()`
+
+## 14 Techniques for Error handling
+### 14.1 Error handling
+- By default React catches run time errors
+- But we haven't handled:
+    - delayed errors Ex: setTimeout
+    - Bundle invalid code or code with invalid syntax
+- We are only showing message in console, but need to handle errors in UI for user
+
+### 14.2 Extracting reusable error logic
+- 3 types of errors can happen during bundle or execution
+    - bundle error (due to invalid code)
+    - runtime error (synchronous error during execution)
+    - delayed error (try catch doesn't detect delayed errors)
+
+### 14.3 Handling async errors
+- Async erros can not be checked with try catch
+- can check by adding a event listener on window level for error
+    - it gets triggered only when an error is thrown
+    - used to handle uncaught errors or async errors
+    - error is not sent but the entire event object is received in event listener. Which contains the error oject
+- try catch block does not throw an error but catches it
+- Note: by default uncaught errors are logged in console. to prevent, use event.preventDefault()
