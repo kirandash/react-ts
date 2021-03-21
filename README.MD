@@ -75,6 +75,9 @@
 ### 3.5. Applying Types to Refs - src/refs/UserSearch.tsx
 - `const inputRef = useRef<HTMLInputElement | null>(null)` - null value just in case no ref is used in component
 
+### 3.6 More on Refs - src/refs/UserSearch.tsx
+- on render: focus input element
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
