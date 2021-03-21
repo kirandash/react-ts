@@ -156,6 +156,9 @@
 ### 4.17. Reminder on Event Types - src/components/RepositoriesList.tsx
 - `onSubmit = (event: React.FormEvent<HTMLFormElement>)`
 
+### 4.18 Calling an Action Creator - src/components/RepositoriesList.tsx
+- useDispatch and actionCreator
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
