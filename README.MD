@@ -63,6 +63,11 @@
 - `onChange = (event: React.ChangeEvent<HTMLInputElement>)`
     - Similare events: hover event, drag event etc
 
+### 3.3 Handling Drag Events Too! - EventComponent.tsx
+- `onDragStart = (event: React.DragEvent<HTMLDivElement>)`
+- use VSCode tips suggestions to detect event type
+- Many other events viz: FocusEvent, PointerEvent
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
