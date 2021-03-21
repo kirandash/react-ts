@@ -53,6 +53,12 @@
     - {name: string, age: number}: when a user is found
 - Ex: `const [user, setUser] = useState<{ name: string, age: number } | undefined>()`
 
+## 3 Types around Events and Refs
+### 3.1 Inline event handlers - EventComponent.tsx
+- inline on change event doesn't have type check for event but if we separate it into another fn event has a type check and throws error
+
+
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
