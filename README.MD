@@ -140,6 +140,9 @@
 ### 4.12. Adding Request Logic
 - call API in action creator searchRepositories
 
+### 4.13. Applying Typings to Dispatch - src/state/action-creators/index.ts
+- add action type in dispatch method
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
