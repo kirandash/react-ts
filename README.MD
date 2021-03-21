@@ -61,13 +61,13 @@
     - Bundle invalid code or code with invalid syntax
 - We are only showing message in console, but need to handle errors in UI for user
 
-### 14.2 Extracting reusable error logic
+### 14.2 Extracting reusable error logic  - preview.tsx
 - 3 types of errors can happen during bundle or execution
     - bundle error (due to invalid code)
     - runtime error (synchronous error during execution)
     - delayed error (try catch doesn't detect delayed errors)
 
-### 14.3 Handling async errors
+### 14.3 Handling async errors - preview.tsx
 - Async erros can not be checked with try catch
 - can check by adding a event listener on window level for error
     - it gets triggered only when an error is thrown
@@ -75,3 +75,6 @@
     - error is not sent but the entire event object is received in event listener. Which contains the error oject
 - try catch block does not throw an error but catches it
 - Note: by default uncaught errors are logged in console. to prevent, use event.preventDefault()
+
+### 14.4 Capturing bundle errors 
+
