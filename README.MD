@@ -76,5 +76,6 @@
 - try catch block does not throw an error but catches it
 - Note: by default uncaught errors are logged in console. to prevent, use event.preventDefault()
 
-### 14.4 Capturing bundle errors 
-
+### 14.4 Capturing bundle errors - src/bundler/index.ts
+- add try catch block in index.ts
+- set code or error based on returned data in components/code-cell.tsx
