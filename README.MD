@@ -164,6 +164,13 @@
 - use in src/components/RepositoriesList.tsx
     - much cleaner than using the entire useDispatch hook in component
 
+### 4.20. Selecting State - src/components/RepositoriesList.tsx
+- useSelector
+- `const { data, error, loading } = useSelector((state) => state.repositories)`
+- similar to mapStateToProps fn
+- Note: useSelector has no idea of state data type
+    - To fix this: need additional typing
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
