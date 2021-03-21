@@ -171,6 +171,10 @@
 - Note: useSelector has no idea of state data type
     - To fix this: need additional typing
 
+### 4.21 Awkward typings around React Redux
+- reducers/index.ts
+- TS is aware of type of reducers but not in state
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
