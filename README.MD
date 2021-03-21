@@ -179,6 +179,15 @@
 - src/hooks/useTypedSelector.ts
 - useTypedSelector in src/components/RepositoriesList.tsx
 
+### 4.23. Consuming Store State
+- src/components/RepositoriesList.tsx
+
+### 4.24 Summary
+- Big issues with React+Redux and TS
+    - Import b/w files can turn messy
+    - Communicating types over to components can be challenging
+    - Type def files for Redux, React-Redux and others are possily over enginnered
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
