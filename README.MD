@@ -135,6 +135,8 @@
 - state/action-types/index.ts file - export enum
 - Fix imports in reducer
 
+### 4.11. Adding Action Creators
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
