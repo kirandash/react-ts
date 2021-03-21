@@ -78,6 +78,40 @@
 ### 3.6 More on Refs - src/refs/UserSearch.tsx
 - on render: focus input element
 
+## 4 TS with Redux
+### 4.1 App Overview and setup
+- `npm i --save-exact @types/react-redux@7.1.15 axios@0.21.1 react-redux@7.2.2 redux@4.0.5 redux-thunk@2.3.0`
+
+### 4.2 Redux Design
+- API: https://api.npms.io/v2/search?q=react
+- we are fetching packages from npm
+- 'package' is a reserved keyword in TS (like 'for' 'import' etc)
+- We are going to call npm packages 'repositories'
+- Structure: 
+    - reducer
+        - repositories
+            - data
+            - loading
+            - error
+    - action creator (searchRepositories(name))
+        - actions:
+            - searchRepositories
+            - searchRepositoriesSuccess
+            - searchRepositoriesError
+        - action types:
+            - search_repositories
+            - search_repositories_success
+            - search_repositories_error
+- Folder structure
+    - components
+        - App.tsx, RepositoriesList.tsx
+    - redux stuff
+        - index.ts - single access point for all redux communications (imports from all redux items and re exports)
+        - reducers, action creators, middlewares
+
+### 4.3 Reducer Setup - src/state/reducers/repositoriesReducer.ts
+- create repositoriesReducer
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
