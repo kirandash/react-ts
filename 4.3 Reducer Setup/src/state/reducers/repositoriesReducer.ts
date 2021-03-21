@@ -8,14 +8,32 @@ interface RepositoriesState {
 }
 
 // 4.6. Typing an Action
-interface Action {
-  type: string;
-  payload?: any; // optional
-}
+// interface Action {
+//   type: string;
+//   payload?: any; // optional
+// }
+
+// 4.7. Separate Interfaces for Actions
+interface SearchRepositoriesAction {
+  type: 'search_repositories';
+} // no payload
+
+interface SearchRepositoriesSuccessAction {
+  type: 'search_repositories_success';
+  payload: string[];
+} // payload - array of strings
+
+interface SearchRepositoriesErrorAction {
+  type: 'search_repositories_error';
+  payload: string;
+} // payload - string
 
 // reducer
 // 4.5. Annotating the Return Type for reducer with RepositoriesState
-const reducer = (state: RepositoriesState, action: Action): RepositoriesState => {
+const reducer = (state: RepositoriesState, action:     | SearchRepositoriesAction
+  | SearchRepositoriesSuccessAction
+  | SearchRepositoriesErrorAction): RepositoriesState => {
+  // type guard makes sure action type is 100% match
   switch (action.type) {
     case 'search_repositories':
       return { loading: true, error: null, data: [] };
