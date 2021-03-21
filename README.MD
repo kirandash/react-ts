@@ -116,6 +116,9 @@
 - `reducer = (state: RepositoriesState, action: any): RepositoriesState`
 - so that returned data type is checked properly
 
+### 4.6. Typing an Action
+- create Action Interface
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
