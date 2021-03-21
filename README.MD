@@ -54,19 +54,23 @@
 - Ex: `const [user, setUser] = useState<{ name: string, age: number } | undefined>()`
 
 ## 3 Types around Events and Refs
-### 3.1 Inline event handlers - EventComponent.tsx
+### 3.1 Inline event handlers - src/events/EventComponent.tsx
 - inline on change event doesn't have type check for event but if we separate it into another fn event has a type check and throws error
 
-### 3.2 Typing standalone event handlers - EventComponent.tsx
+### 3.2 Typing standalone event handlers - src/events/EventComponent.tsx
 - Inline event handlers has inference type assignment by TS. Since TS knows inline event handlers syntax
 - Type inference doesn't apply for event handlers defined before hand. only applied if event handler is defined inline in JSX
 - `onChange = (event: React.ChangeEvent<HTMLInputElement>)`
     - Similare events: hover event, drag event etc
 
-### 3.3 Handling Drag Events Too! - EventComponent.tsx
+### 3.3 Handling Drag Events Too! - src/events/EventComponent.tsx
 - `onDragStart = (event: React.DragEvent<HTMLDivElement>)`
 - use VSCode tips suggestions to detect event type
 - Many other events viz: FocusEvent, PointerEvent
+
+### 3.4. TypeScript with Class Components - src/classes/UserSearch..tsx
+- handle props
+- handle state
 
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
