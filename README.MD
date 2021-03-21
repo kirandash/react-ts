@@ -159,6 +159,11 @@
 ### 4.18 Calling an Action Creator - src/components/RepositoriesList.tsx
 - useDispatch and actionCreator
 
+### 4.19. Binding Action Creators
+- create custom hook: src/hooks/useActions.ts
+- use in src/components/RepositoriesList.tsx
+    - much cleaner than using the entire useDispatch hook in component
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
