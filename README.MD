@@ -188,6 +188,88 @@
     - Communicating types over to components can be challenging
     - Type def files for Redux, React-Redux and others are possily over enginnered
 
+## 5 App Overview
+- Project: A CLI to launch an interactive development environment for writing + documenting code
+- **Features**:
+    - User can edit and add doc
+    - User can edit and add code and preview
+    - User can import packages
+    - Changes user does will be added to a .js file
+- **Challenges**:
+    - We will have a preview component to preview code
+    - Challenge #1: The code is provided to Preview as a string! How do we even execute code in a string safely?
+        - If users code has any error: it should not throw any error
+    - #2: This code might have advanced JS syntax in it (like JSX) that your browser can't execute
+    - #3: Code might have import statements for other JS files or CSS. We have to deal with those import statements before executing the code
+
+## 6 Code Transpiling in the Browser
+### 6.1 Transpiling Options
+- Advanced Code viz React ---> Babel (Transpiler) ---> Safe to execute code for browser
+- Similar inspiration:
+    - codepen.io, babeljs.io
+- codepen:
+    - sends users code via process api in network to server to transpile with babel and then respond back with compiled code
+
+### 6.2 Remote Transpiling
+- babeljs.io:
+    - Does not send code to server
+    - Code ---> In-browser Transpiler ---> Transpiled result
+
+### 6.3 Module Systems
+- JS modules:
+    - js file that makes some values available to other files and/or consumes values from other files
+    - export and import
+- Solution: Use something called a **bundler** (webpack!)
+    - Single file containing both modules linked together in some way
+
+### 6.4 Behind the scenes with webpack
+- Job  of bundler:
+    - Read the contents of the entry file (index.js)
+    - Automatically found all the different require/import/export statements
+    - Automatically found all the modules on our hard drives
+    - Linked these files together into a single output file with all values beind correctly communicated around.
+- Our project:
+    - since we will be working on browser, instead of looking for modules on hard drive we will be getting moudules straight from npm
+
+### 6.5 Options for bundling
+- Option #1:
+    - React App ---> (code) ---> backend API server (webpack runs ---> webpack finds missing module ---> npm install plugin gets module (from npm registry) ---> Bundle complete!) ---> Bundled Code ---> React App
+    - drawback: backend storage will eventually end up with a lot of npm modules
+- [npm install webpack plugin] (https://github.com/webpack-contrib/npm-install-webpack-plugin#readme)
+    - automatically installs missing plugins and dependencies on the fly without throwing an error
+- Option #2:
+    - Identical to option #2. But instead of saving moduels in backend. We will write our own plugin to fetch individual file from npm.
+- Option #3:
+    - Webpack runs in our react app instead of a backend.
+    - So no need of making any API call to backend. Bundling happens in user's browser
+
+### 6.6 Which option is best?
+- Remote approach:
+    - We can cache downloaded NPM modules to bundle code faster
+    - Will work better for users with slow devices or limited internet connections
+- Local approach:
+    - Removes an extra request to the API
+    - Faster code execution
+    - We don't have to maintain API server
+    - Less complexity - no moving code back and forth
+    - Con: Webpack doesn't work in the browser
+
+### 6.7 Webpack Replacement with ESBuild
+- Raw user code ---> Babel  (Transpile) ---> Webpack (Bundling) ---> Code ready to execute
+- Our solution: ESBuild for transpiling and bundling
+    - ESBuild can transpile + bundle our code - all in the browser
+    - [Doc](https://github.com/evanw/esbuild)
+    - Extreme speed without needing a cache
+
+## 7. Implement in browser bundling
+### 7.1 Demo App
+- `npx create-react-app jbook --template typescript`
+
+### 7.2 Project Setup
+- `npm i --save-exact esbuild-wasm@0.8.27`
+
+### 7.3 Add form to enter and display code
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
