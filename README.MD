@@ -270,6 +270,17 @@
 
 ### 7.3 Add form to enter and display code
 
+### 7.4 Understanding ESBuild and wasm
+- [Transform API](https://esbuild.github.io/api/#transform-api)
+- esbuild is built with Go programming lang
+- esbuild npm module ( Go Code (does transpiling and bundling) + JS wrapper)
+- esbuild-wasm:
+    - esbuild web assembly
+    - gives a small amount of JS (to interact with React App)
+    - WASM (Go lang bundler compiled to work in browsere)
+- Move esbuild.wasm file from node-modules to public file.
+    - Since we want to run the file in our browser.
+
 ## 14 Techniques for Error handling
 ### 14.1 Error handling
 - By default React catches run time errors
